@@ -5,7 +5,7 @@ def show_buckets(s3_obj):
 
 # upload file to s3 bucket
 def upload_file(s3_obj):
-    file_data = open(r'C:\Users\poona\OneDrive\Documents\Aus file Preparation\Poonam rangpariya_cv.pdf','rb')
+    file_data = open(r'Poonam_cv.pdf','rb')
     s3_obj.Bucket('bucketforpoonam').put_object(Key = 'Poonam rangpariya_cv', Body=file_data)
     file_data.close()
     print("File uploaded successfully")
